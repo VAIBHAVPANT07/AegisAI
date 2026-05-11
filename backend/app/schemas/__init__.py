@@ -14,3 +14,4 @@ __all__ = [
     "RiskClassificationRequest", "RiskClassificationResponse",
     "DocumentCreate", "DocumentResponse"
 ]
+from app.schemas.rag_feedback import RAGFeedbackRequest
