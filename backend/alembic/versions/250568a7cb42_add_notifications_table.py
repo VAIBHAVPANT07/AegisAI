@@ -26,10 +26,10 @@ def upgrade() -> None:
         sa.Column('notification_type', sa.String(length=100), nullable=False),
         sa.Column('title', sa.String(length=255), nullable=False),
         sa.Column('message', sa.Text(), nullable=False),
-        sa.Column('is_read', sa.Boolean(), nullable=True),
+        sa.Column('is_read', sa.Boolean(), nullable=False, server_default=sa.false()),
         sa.Column('resource_type', sa.String(length=100), nullable=True),
         sa.Column('resource_id', sa.Integer(), nullable=True),
-        sa.Column('created_at', sa.DateTime(), nullable=True),
+        sa.Column('created_at', sa.DateTime(timezone=True), nullable=False, server_default=sa.func.now()),
         sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
         sa.PrimaryKeyConstraint('id')
     )

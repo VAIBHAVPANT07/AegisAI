@@ -4,5 +4,17 @@ from app.models.document import Document
 from app.models.rag_feedback import RAGFeedback
 from app.models.notification import Notification
 from app.models.audit_log import AISystemAuditLog
+from app.models.compliance_snapshot import ComplianceSnapshot
+from app.models.webhook import WebhookConfig
 
-__all__ = ["User", "AISystem", "RiskAssessment", "Document", "RAGFeedback", "Notification", "AISystemAuditLog"]
+__all__ = [
+    "User",
+    "AISystem",
+    "RiskAssessment",
+    "Document",
+    "RAGFeedback",
+    "Notification",
+    "AISystemAuditLog",
+    "ComplianceSnapshot",
+    "WebhookConfig",
+]
